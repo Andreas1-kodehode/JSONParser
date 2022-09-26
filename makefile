@@ -5,7 +5,7 @@ OBJS = $(SRCS:.cpp=.o)
 OUT=prog.out
 
 $(OUT): $(OBJS)
-	g++-9 $(OBJS) $(CPPFLAGS) -o $@ $(LDFLAGS)
+	g++ $(OBJS) $(CPPFLAGS) -o $@ $(LDFLAGS)
 
 %.o: %.cpp
 	g++ $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
